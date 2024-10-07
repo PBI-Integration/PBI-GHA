@@ -1,0 +1,29 @@
+{
+    "version": "0.11",
+    "created": "2022-03-01T18:09:54.2556434+00:00",
+    "deployments": {
+      "Files": {
+        "mode": "Report",
+        "source": {
+          "type": "File",
+          "path": "./*.pbix$"
+        },
+        "authentication": {
+          "type": "ServicePrincipal",
+          "tenantId": "ef6ec515-e37b-40c2-b669-6d80b3223d79",
+          "clientId": "d2657a85-5607-4df5-b851-3bc5219006e0",
+          "clientSecret": "%PBI_CLIENT_SECRET%"
+        },
+        "options": {
+          "import": {
+            "nameConflict": "CreateOrOverwrite"
+          }
+        },
+        "environments": {
+          "PROD": {
+            "workspace": "PBI-Integration-Dev"
+          }
+        }
+      }
+    }
+  }
